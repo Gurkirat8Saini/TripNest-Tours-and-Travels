@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TripNest | Tour & Travels</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+    <div class="loader">
+    <div class="spinner"></div>
+</div>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Trip<span>Nest</span>
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html" class="active">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="destinations.html">
+                    Destinations
+                </a>
+            </li>
+
+            <li>
+                <a href="packages.html">
+                    Packages
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About Us
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a href="contact.html" class="book-btn">
+            Book Now
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO SECTION
+========================= -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="hero-small">
+            TRAVEL • EXPLORE • DISCOVER
+        </div>
+
+
+        <h1>
+            Discover the World,
+            <span>Live the Journey.</span>
+        </h1>
+
+
+        <p>
+            Explore beautiful destinations, exciting experiences
+            and carefully planned tour packages with TripNest.
+        </p>
+
+
+        <div class="buttons">
+
+            <a href="destinations.html" class="primary-btn">
+                Explore Destinations
+            </a>
+
+
+            <a href="packages.html" class="secondary-btn">
+                View Packages
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SEARCH BOX
+========================= -->
+<!-- REACT TRIP SEARCH -->
+<div class="search-wrapper">
+    <div class="container search-box">
+        <div id="react-trip-search"></div>
+    </div>
+</div>
+
+<!-- <div class="search-wrapper">
+
+    <div class="container search-box">
+
+
+        <div class="search-item">
+
+            <small>
+                DESTINATION
+            </small>
+
+            <strong>
+                Where do you want to go?
+            </strong>
+
+        </div>
+
+
+
+        <div class="search-item">
+
+            <small>
+                TRAVEL DATE
+            </small>
+
+            <strong>
+                Choose your date
+            </strong>
+
+        </div>
+
+
+
+        <div class="search-item">
+
+            <small>
+                TRAVELLERS
+            </small>
+
+            <strong>
+                2 Travellers
+            </strong>
+
+        </div>
+
+
+
+        <button class="search-button">
+            Search Trips
+        </button>
+
+
+    </div>
+
+</div>
+ -->
+
+
+<!-- =========================
+     POPULAR DESTINATIONS
+========================= -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <small>
+                POPULAR DESTINATIONS
+            </small>
+
+            <h2>
+                Places Worth Exploring
+            </h2>
+
+            <p>
+                Start your journey from some of India's
+                most loved destinations.
+            </p>
+
+        </div>
+
+
+
+        <div class="destination-grid">
+
+
+            <!-- AMRITSAR -->
+
+            <a href="destinations.html" class="destination-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=900&q=85"
+                    alt="Amritsar">
+
+                <div class="destination-content">
+
+                    <h3>
+                        Amritsar
+                    </h3>
+
+                    <p>
+                        Golden Temple • Spirituality • Heritage
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- GOA -->
+
+            <a href="destinations.html" class="destination-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=85"
+                    alt="Goa">
+
+                <div class="destination-content">
+
+                    <h3>
+                        Goa
+                    </h3>
+
+                    <p>
+                        Beaches • Adventure • Nightlife
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- KASHMIR -->
+
+            <a href="destinations.html" class="destination-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=900&q=85"
+                    alt="Kashmir">
+
+                <div class="destination-content">
+
+                    <h3>
+                        Kashmir
+                    </h3>
+
+                    <p>
+                        Mountains • Lakes • Nature
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- MANALI -->
+
+            <a href="destinations.html" class="destination-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=85"
+                    alt="Manali">
+
+                <div class="destination-content">
+
+                    <h3>
+                        Manali
+                    </h3>
+
+                    <p>
+                        Snow • Mountains • Adventure
+                    </p>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- JAIPUR -->
+
+            <a href="destinations.html" class="destination-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=900&q=85"
+                    alt="Jaipur">
+
+                <div class="destination-content">
+
+                    <h3>
+                        Jaipur
+                    </h3>
+
+                    <p>
+                        Heritage • Culture • Royalty
+                    </p>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FEATURED PACKAGES
+========================= -->
+
+<section class="light-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <small>
+                FEATURED PACKAGES
+            </small>
+
+            <h2>
+                Plan Your Perfect Escape
+            </h2>
+
+            <p>
+                Handpicked trips for unforgettable experiences.
+            </p>
+
+        </div>
+
+
+
+        <div class="card-grid">
+
+
+            <!-- AMRITSAR PACKAGE -->
+
+            <div class="package-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=900&q=85"
+                    alt="Amritsar">
+
+                <div class="package-content">
+
+                    <h3>
+                        Golden Temple & Amritsar
+                    </h3>
+
+                    <p class="package-info">
+                        3 Days / 2 Nights
+                    </p>
+
+                    <p class="package-info">
+                        Golden Temple + Wagah Border
+                    </p>
+
+
+                    <div class="price-row">
+
+                        <span class="price">
+                            ₹7,999
+                        </span>
+
+                        <a href="packages.html">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GOA PACKAGE -->
+
+            <div class="package-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=85"
+                    alt="Goa">
+
+                <div class="package-content">
+
+                    <h3>
+                        Goa Beach Escape
+                    </h3>
+
+                    <p class="package-info">
+                        4 Days / 3 Nights
+                    </p>
+
+                    <p class="package-info">
+                        Beaches + Water Sports
+                    </p>
+
+
+                    <div class="price-row">
+
+                        <span class="price">
+                            ₹11,999
+                        </span>
+
+                        <a href="packages.html">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- KASHMIR PACKAGE -->
+
+            <div class="package-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=900&q=85"
+                    alt="Kashmir">
+
+                <div class="package-content">
+
+                    <h3>
+                        Kashmir Paradise
+                    </h3>
+
+                    <p class="package-info">
+                        5 Days / 4 Nights
+                    </p>
+
+                    <p class="package-info">
+                        Srinagar + Gulmarg
+                    </p>
+
+
+                    <div class="price-row">
+
+                        <span class="price">
+                            ₹16,999
+                        </span>
+
+                        <a href="packages.html">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY CHOOSE TRIPNEST
+========================= -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <small>
+                WHY TRIPNEST?
+            </small>
+
+            <h2>
+                Travel With Confidence
+            </h2>
+
+            <p>
+                We make your travel experience simple,
+                comfortable and memorable.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-grid">
+
+
+            <!-- FEATURE 1 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    💰
+                </div>
+
+                <h3>
+                    Best Prices
+                </h3>
+
+                <p>
+                    Great travel experiences at affordable prices.
+                </p>
+
+            </div>
+
+
+
+            <!-- FEATURE 2 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🧭
+                </div>
+
+                <h3>
+                    Top Destinations
+                </h3>
+
+                <p>
+                    Explore carefully selected destinations.
+                </p>
+
+            </div>
+
+
+
+            <!-- FEATURE 3 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Safe Travel
+                </h3>
+
+                <p>
+                    Your comfort and safety come first.
+                </p>
+
+            </div>
+
+
+
+            <!-- FEATURE 4 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ☎️
+                </div>
+
+                <h3>
+                    24/7 Support
+                </h3>
+
+                <p>
+                    We are here whenever you need us.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CALL TO ACTION
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Ready to Explore the World?
+        </h2>
+
+        <p>
+            Your next unforgettable journey starts here.
+        </p>
+
+        <a href="contact.html" class="primary-btn">
+            Start Your Journey
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+
+        <!-- FOOTER ABOUT -->
+
+        <div>
+
+            <h2 class="logo">
+                Trip<span>Nest</span>
+            </h2>
+
+            <p>
+                Making travel simple, memorable
+                and exciting.
+            </p>
+
+        </div>
+
+
+
+        <!-- QUICK LINKS -->
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="destinations.html">
+                Destinations
+            </a>
+
+            <a href="packages.html">
+                Packages
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <!-- EXPLORE -->
+
+        <div>
+
+            <h3>
+                Explore
+            </h3>
+
+            <a href="destinations.html">
+                Amritsar
+            </a>
+
+            <a href="destinations.html">
+                Goa
+            </a>
+
+            <a href="destinations.html">
+                Kashmir
+            </a>
+
+            <a href="destinations.html">
+                Manali
+            </a>
+
+            <a href="destinations.html">
+                Jaipur
+            </a>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📍 Chandigarh, India
+            </p>
+
+            <p>
+                📞 +91 98765 43210
+            </p>
+
+            <p>
+                ✉ info@tripnest.com
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+        © 2026 TripNest. All Rights Reserved.
+
+    </div>
+</footer>
+
+<!-- React CDN: Used only on the homepage -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- Homepage React Component -->
+<script src="home-react.js"></script>
+
+</body>
+</html>
+<!-- </footer>
+
+
+</body>
+
+</html> -->
