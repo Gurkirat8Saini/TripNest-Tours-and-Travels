@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | TripNest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+    <!-- Header -->
+    <header class="login-header">
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                Trip<span>Nest</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="active"id="nav-login">Login</a></li>
+            </ul>
+
+            <a href="contact.html" class="book-btn">Book Now</a>
+
+        </nav>
+    </header>
+
+    <!-- Login and Sign Up Section -->
+    <main class="login-container">
+
+        <div class="login-card">
+
+            <h1 id="form-title">Welcome Back!</h1>
+
+            <p class="login-subtitle" id="form-subtitle">
+                Login to continue your journey with TripNest.
+            </p>
+
+            <!-- Login Form -->
+            <form id="login-form">
+
+                <div class="login-field">
+                    <label for="login-email">Email Address</label>
+                    <input
+                        type="email"
+                        id="login-email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="login-field">
+                    <label for="login-password">Password</label>
+                    <input
+                        type="password"
+                        id="login-password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <div class="login-options">
+                    <label>
+                        <input type="checkbox" id="show-password">
+                        Show password
+                    </label>
+                </div>
+
+                <button type="submit" class="login-submit">
+                    Login
+                </button>
+
+                <p id="login-message" role="status" aria-live="polite"></p>
+
+            </form>
+
+            <!-- Sign Up Form -->
+            <form id="signup-form" style="display: none;">
+
+                <div class="login-field">
+                    <label for="signup-name">Full Name</label>
+                    <input
+                        type="text"
+                        id="signup-name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="login-field">
+                    <label for="signup-email">Email Address</label>
+                    <input
+                        type="email"
+                        id="signup-email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="login-field">
+                    <label for="signup-password">Password</label>
+                    <input
+                        type="password"
+                        id="signup-password"
+                        placeholder="Create a password"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <div class="login-field">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        placeholder="Confirm your password"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <div class="login-options">
+                    <label>
+                        <input type="checkbox" id="show-signup-password">
+                        Show passwords
+                    </label>
+                </div>
+
+                <button type="submit" class="login-submit">
+                    Sign Up
+                </button>
+
+                <p id="signup-message" role="status" aria-live="polite"></p>
+
+            </form>
+
+            <!-- Switch Between Forms -->
+            <p class="login-footer">
+                <span id="footer-text">Don't have an account?</span>
+                <a href="#" id="toggle-form">Sign Up</a>
+            </p>
+
+        </div>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const signupForm = document.getElementById("signup-form");
+
+        const formTitle = document.getElementById("form-title");
+        const formSubtitle = document.getElementById("form-subtitle");
+        const footerText = document.getElementById("footer-text");
+        const toggleForm = document.getElementById("toggle-form");
+
+        const loginMessage = document.getElementById("login-message");
+        const signupMessage = document.getElementById("signup-message");
+
+        // Switch between Login and Sign Up
+        toggleForm.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            loginMessage.textContent = "";
+            signupMessage.textContent = "";
+
+            if (loginForm.style.display !== "none") {
+
+                loginForm.style.display = "none";
+                signupForm.style.display = "block";
+
+                formTitle.textContent = "Create Account";
+                formSubtitle.textContent =
+                    "Join TripNest and start your journey.";
+
+                footerText.textContent = "Already have an account?";
+                toggleForm.textContent = "Login";
+
+            } else {
+
+                signupForm.style.display = "none";
+                loginForm.style.display = "block";
+
+                formTitle.textContent = "Welcome Back!";
+                formSubtitle.textContent =
+                    "Login to continue your journey with TripNest.";
+
+                footerText.textContent = "Don't have an account?";
+                toggleForm.textContent = "Sign Up";
+            }
+        });
+
+        // Show or hide Login password
+        document.getElementById("show-password")
+            .addEventListener("change", function () {
+
+                document.getElementById("login-password").type =
+                    this.checked ? "text" : "password";
+            });
+
+        // Show or hide Sign Up passwords
+        document.getElementById("show-signup-password")
+            .addEventListener("change", function () {
+
+                const password = document.getElementById("signup-password");
+                const confirmPassword =
+                    document.getElementById("confirm-password");
+
+                password.type = this.checked ? "text" : "password";
+                confirmPassword.type = this.checked ? "text" : "password";
+            });
+
+        // Sign Up: Save user details in localStorage
+        signupForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name =
+                document.getElementById("signup-name").value.trim();
+
+            const email =
+                document.getElementById("signup-email").value.trim().toLowerCase();
+
+            const password =
+                document.getElementById("signup-password").value;
+
+            const confirmPassword =
+                document.getElementById("confirm-password").value;
+
+            signupMessage.textContent = "";
+
+            // Check whether passwords match
+            if (password !== confirmPassword) {
+                signupMessage.style.color = "#f87171";
+                signupMessage.textContent = "Passwords do not match!";
+                return;
+            }
+
+            // Get existing registered users
+            let users;
+
+            try {
+                users = JSON.parse(localStorage.getItem("tripnestUsers")) || [];
+
+                if (!Array.isArray(users)) {
+                    users = [];
+                }
+            } catch (error) {
+                users = [];
+            }
+
+            // Check whether email is already registered
+            const existingUser = users.find(function (user) {
+                return user.email === email;
+            });
+
+            if (existingUser) {
+                signupMessage.style.color = "#f87171";
+                signupMessage.textContent =
+                    "This email is already registered!";
+                return;
+            }
+
+            // Add the new user
+            users.push({
+                name: name,
+                email: email,
+                password: password
+            });
+
+            // Save users in localStorage
+            try {
+                localStorage.setItem("tripnestUsers", JSON.stringify(users));
+
+                signupMessage.style.color = "#4ade80";
+                signupMessage.textContent =
+                    "Account created successfully! You can now log in.";
+
+                signupForm.reset();
+
+                document.getElementById("show-signup-password").checked = false;
+
+            } catch (error) {
+                signupMessage.style.color = "#f87171";
+                signupMessage.textContent =
+                    "Unable to save account details in this browser.";
+            }
+        });
+
+        // Login: Verify credentials using localStorage
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const email =
+                document.getElementById("login-email").value.trim().toLowerCase();
+
+            const password =
+                document.getElementById("login-password").value;
+
+            let users;
+
+            try {
+                users = JSON.parse(localStorage.getItem("tripnestUsers")) || [];
+
+                if (!Array.isArray(users)) {
+                    users = [];
+                }
+            } catch (error) {
+                users = [];
+            }
+
+            // Find a user with matching credentials
+            const user = users.find(function (registeredUser) {
+                return registeredUser.email === email &&
+                    registeredUser.password === password;
+            });
+
+            if (user) {
+
+                try {
+                    localStorage.setItem("tripnestLoggedInUser", user.email);
+
+                    loginMessage.style.color = "#4ade80";
+                    loginMessage.textContent =
+                        "Welcome, " + user.name + "! Redirecting.";
+                        setTimeout(function(){
+                            window.location.href = "index.html";
+                        },1000);
+
+                } catch (error) {
+                    loginMessage.style.color = "#f87171";
+                    loginMessage.textContent =
+                        "Unable to save your login status.";
+                }
+
+            } else {
+
+                loginMessage.style.color = "#f87171";
+                loginMessage.textContent =
+                    "Invalid email or password. Please try again.";
+            }
+        });
+    </script>
+<script src="script.js"></script>
+</body>
+</html>
